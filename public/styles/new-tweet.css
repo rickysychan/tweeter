@@ -1,0 +1,22 @@
+.new-tweet{
+  border-radius: 5px;
+  background-color:lightgray;
+}
+
+.new-tweet form{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.new-tweet textarea{
+  width: 100%
+}
+
+.new-tweet h2{
+  padding: 10px 10px 0px 10px;
+  margin-bottom: 0px;
+}
+
+.new-tweet hr{
+  margin-top: 0px;
+}

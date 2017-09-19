@@ -16,12 +16,15 @@
 
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
+    <link rel="stylesheet" href="/styles/tweet-template.css" type="text/css" />
+
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
 
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
   </head>
 
@@ -34,16 +37,34 @@
     </nav>
 
     <main class="container">
-    <section class="new-tweet">
-      <h2>Compose Tweet</h2>
-      <hr>
-        <form action="/tweets" method="POST">
-        <textarea name="text" placeholder="What are you humming about?"></textarea>
-        <input type="submit" value="Tweet">
-    <span class="counter">140</span>
-  </form>
-</section>
-    </main>
+      <section class="new-tweet">
+        <h2>Compose Tweet</h2>
+        <hr>
+          <form action="/tweets" method="POST">
+            <textarea name="text" placeholder="What are you humming about?"></textarea>
+            <input type="submit" value="Tweet">
+            <span class="counter">140</span>
+          </form>
+      </section>
+      <div id="tweets-container">
+        <article class="tweet">
+          <header>
+            <img class="avatar-img" src="/images/bird.png">
+            <p class="tweet-handle"> @JamesC </p>
+            <h1>James Cameron</h1>
+          </header>
+          <p> little tweet here </p>
+          <footer>
+            <p>10 days ago</p>
+            <div class="icon-container">
+              <img class="avatar-img" src="/images/flag.png">
+              <img class="avatar-img" src="/images/re-tweet.png">
+              <img class="avatar-img" src="/images/heart.png">
+            </div>
+          </footer>
+        </article>
+      </div>
+  </main>
 
   </body>
 </html>

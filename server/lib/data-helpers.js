@@ -25,3 +25,6 @@ module.exports = function makeDataHelpers(db) {
 
   };
 }
+
+// this whole things is to keep the code clean but encapsulating the saving and retireiving
+//of the db in this file

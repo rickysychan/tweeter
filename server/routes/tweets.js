@@ -17,6 +17,11 @@ module.exports = function(DataHelpers) {
     });
   });
 
+// this is a get action which gets information of the tweets when someone requests for the
+// home page
+//this checks to see if there is an error, if there isn't it responds with the tweets
+// organized as a JSON file
+
   tweetsRoutes.post("/", function(req, res) {
     if (!req.body.text) {
       res.status(400).json({ error: 'invalid request: no data in POST body'});
@@ -32,6 +37,11 @@ module.exports = function(DataHelpers) {
       created_at: Date.now()
     };
 
+// this is a post router which only activates when a user has submitted something in our form
+// (the tweeter form)
+// this cehcks to see if there is actually anything entered in the tweet if there is
+// it geneterates a random user and it's information as well as the current time
+
     DataHelpers.saveTweet(tweet, (err) => {
       if (err) {
         res.status(500).json({ error: err.message });
@@ -42,5 +52,9 @@ module.exports = function(DataHelpers) {
   });
 
   return tweetsRoutes;
+
+  // this checks for errors if none it will send an ok form and returns
+  // whatever has been generated in tweetsroutes, it saves it to the db with datahelpers.
+
 
 }

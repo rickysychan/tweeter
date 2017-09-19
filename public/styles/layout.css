@@ -25,7 +25,8 @@ main {
   width: 450px;
   background-color: white;
   /*margin: 80px auto 0px;*/
-  margin: 140px auto 0px;
+  margin: 60px auto 0px;
+  padding: 30px;
 }
 
 body{
@@ -35,6 +36,7 @@ body{
 body .counter{
   float: right;
 }
+
 
 
 

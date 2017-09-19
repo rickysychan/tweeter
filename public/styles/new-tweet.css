@@ -1,6 +1,7 @@
 .new-tweet{
   border-radius: 5px;
   background-color:lightgray;
+  height: 130px;
 }
 
 .new-tweet form{
@@ -19,4 +20,8 @@
 
 .new-tweet hr{
   margin-top: 0px;
+}
+
+.lblCountRed{
+color: red;
 }

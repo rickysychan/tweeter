@@ -46,12 +46,13 @@ var data = [
 ];
 
  function renderTweets(tweets) {
-  // loops through tweets
-    // calls createTweetElement for each tweet
-    // takes return value and appends it to the tweets container
-  for(i = 0; i < data.length; i++){
-    let value = createTweetElement(tweets[i]);
-    $('#tweets-container').append(value)
+  tweets.sort(function (a, b) {
+    return a.created_at < b.created_at;
+  });
+  for(i = 0; i < tweets.length; i++){
+    let tweetHTML = createTweetElement(tweets[i]);
+
+    $('#tweets-container').append(tweetHTML)
   }
 }
 
@@ -59,10 +60,46 @@ var data = [
   //and applying createTweetElement on it to create multiple tweets based on the data set
 
 $(document).ready(function(){
-  var value = renderTweets(data);
-  $('#tweets-container').append(value)
+  loadTweets()
+  $('#theForm').on('submit', function(event){
+
+    event.preventDefault();
+
+    let formData = $('#theForm').serialize();
+    let input = $('.textarea').val();
+
+    if(input === '' || input === null){
+      alert('You need to enter something');
+    } else if (input.length > 140){
+      alert('You have passed the maximum allowed characters')
+    } else {
+      $.post('/tweets', formData)
+      .done(function(formData) {
+        loadTweets()
+        $('.textarea').val('');
+      })
+      .fail(function(error) {
+        console.error(error)
+      })
+    };
+  });
 });
 
+// this first loads the tweets so we can see the existing tweets than it has a on click
+// handler which serializes the info gained from the form and sends it off to /tweets
+// tweets turns it back into a json format adds random info and sends the info back to the
+// done section which loads the tweets again. This also validates the input input to check
+// to see if the input matches our criteria
+
+function loadTweets() {
+  $.get('/tweets')
+  .done(function(tweets) {
+    $('#tweets-container').empty();
+    renderTweets(tweets);
+  })
+}
+
+// this loads the tweets after emptying it so that duplicate tweets don't occur
 
 function createTweetElement(tweetData) {
   $tweet = $("<article>").addClass("tweet");
@@ -75,9 +112,9 @@ function createTweetElement(tweetData) {
   $tweet.append($p);
   $footer = $("<footer>");
 
-  // var time = moment(tweetData.created_at).unix();
+  var time = moment(tweetData.created_at).fromNow();
 
-  $footer.append($("<p>").text(tweetData.created_at));
+  $footer.append($("<p>").text(time));
   $footer.append($("<div>").addClass("icon-container"));
   $footer.append($("<img>").addClass("social-img").attr('src', '/images/flag.png'));
   $footer.append($("<img>").addClass("social-img").attr('src', '/images/re-tweet.png'));
@@ -87,9 +124,21 @@ function createTweetElement(tweetData) {
 }
 
 // this function creates a tweet when it is passed a data object. it does this by creating
-// the specific elements in the template tweet we want to create and use append to attach
-// everything together. This cannot be made if we didn't first make an html template on the
-//index html. This requires the driver code below to check to see if it works.
+// the specific elements in the template tweet (which we created in the index.html)
+// we want to create. I used append to attach everything together. This cannot be made
+// if we didn't first make an html template on the index html. This requires the driver
+// code below to check to see if it works. it also should handle the timestamp and convert it
+
+$(document).ready(function(){
+  $( "#nav-button-container" ).on('click', function() {
+    $( ".new-tweet" ).slideToggle();
+    $(".textarea").select();
+  });
+});
+
+// this is the toggle funciton that also auto selects the text area
+
+
 
 // Test / driver code (temporary). Eventually will get this from the server.
 

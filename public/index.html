@@ -20,6 +20,7 @@
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
@@ -34,14 +35,18 @@
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
+      <a id="nav-button-container">
+        <img class="nav-button" src="/images/compose.png">
+        <h2>Compose</h2>
+      </a>
     </nav>
 
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <hr>
-          <form action="/tweets" method="POST">
-            <textarea name="text" placeholder="What are you humming about?"></textarea>
+          <form action="/tweets" method="POST" id="theForm">
+            <textarea class="textarea" name="text" placeholder="What are you humming about?"></textarea>
             <input type="submit" value="Tweet">
             <span class="counter">140</span>
           </form>

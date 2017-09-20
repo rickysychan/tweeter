@@ -39,7 +39,7 @@ module.exports = function(DataHelpers) {
 
 // this is a post router which only activates when a user has submitted something in our form
 // (the tweeter form)
-// this cehcks to see if there is actually anything entered in the tweet if there is
+// this checks to see if there is actually anything entered in the tweet if there is
 // it geneterates a random user and it's information as well as the current time
 
     DataHelpers.saveTweet(tweet, (err) => {
@@ -50,6 +50,7 @@ module.exports = function(DataHelpers) {
       }
     });
   });
+
 
   return tweetsRoutes;
 

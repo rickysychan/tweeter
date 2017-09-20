@@ -24,3 +24,31 @@
   height: 80px;
   line-height: 80px;
 }
+
+#nav-bar .nav-button{
+  float: left;
+  height: 40px;
+  margin-left: 7px;
+}
+
+#nav-button-container{
+background-color: white;
+width: 140px;
+float: right;
+margin-top: 1.8em;
+height: 40px;
+border-radius: .5em;
+border-color: black;
+opacity: .5;
+}
+
+#nav-button-container:hover{
+  opacity: 1;
+}
+
+#nav-button-container h2{
+  padding-right: 20px;
+  margin: 11px 0 0 0;
+  font-size: 1.1em;
+  color:#00a087;
+}

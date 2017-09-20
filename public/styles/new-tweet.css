@@ -2,6 +2,7 @@
   border-radius: 5px;
   background-color:lightgray;
   height: 130px;
+  display: none;
 }
 
 .new-tweet form{
@@ -16,6 +17,7 @@
 .new-tweet h2{
   padding: 10px 10px 0px 10px;
   margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 .new-tweet hr{

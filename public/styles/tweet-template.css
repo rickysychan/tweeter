@@ -2,11 +2,6 @@
   height: 60px;
 }
 
-article{
-   border: 1px solid lightgray;
-   border-radius: 7px
-}
-
 .icon-container {
   overflow: auto;
   padding-top: 0.5em;
@@ -64,6 +59,7 @@ header .avatar-img {
   width: 60px;
   height: auto;
   float: left;
+  padding-right: 10px;
 }
 
 header {
@@ -78,4 +74,10 @@ header h1 {
   margin-bottom: 0;
   margin-top: 0;
   font-size: 25px;
+}
+
+article.tweet{
+   border: 1px solid lightgray;
+   border-radius: 7px;
+   margin-top: 10px;
 }

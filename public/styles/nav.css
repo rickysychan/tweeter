@@ -44,6 +44,7 @@ opacity: .5;
 
 #nav-button-container:hover{
   opacity: 1;
+  cursor: pointer;
 }
 
 #nav-button-container h2{

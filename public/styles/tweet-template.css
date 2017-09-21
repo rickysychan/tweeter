@@ -26,9 +26,8 @@
 }
 
 .tweet > p {
-  padding-left: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 10px;
+  overflow-wrap: break-word;
 }
 
 footer {

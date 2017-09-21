@@ -47,7 +47,13 @@ var data = [
 
  function renderTweets(tweets) {
   tweets.sort(function (a, b) {
-    return a.created_at < b.created_at;
+    if(a.created_at === b.created_at) {
+      return 0;
+    } else if (a.created_at < b.created_at) {
+      return 1;
+    } else {
+      return -1;
+    }
   });
   for(i = 0; i < tweets.length; i++){
     let tweetHTML = createTweetElement(tweets[i]);
@@ -62,7 +68,6 @@ var data = [
 $(document).ready(function(){
   loadTweets()
   $('#theForm').on('submit', function(event){
-
     event.preventDefault();
 
     let formData = $('#theForm').serialize();
@@ -71,18 +76,27 @@ $(document).ready(function(){
     if(input === '' || input === null){
       alert('You need to enter something');
     } else if (input.length > 140){
-      alert('You have passed the maximum allowed characters')
-    } else {
-      $.post('/tweets', formData)
-      .done(function(formData) {
-        loadTweets()
-        $('.textarea').val('');
-      })
-      .fail(function(error) {
-        console.error(error)
-      })
-    };
+        alert('You have passed the maximum allowed characters')
+      } else {
+          $.post('/tweets', formData)
+          .done(function(formData) {
+            loadTweets()
+            $('.textarea').val('');
+          })
+          .fail(function(error) {
+            console.error(error)
+          })
+        };
   });
+});
+
+$(document).ready(function() {
+    $('#theForm textarea').keydown(function(event) {
+        if (event.keyCode == 13) {
+            $(this.form).submit();
+            return false;
+         }
+    });
 });
 
 // this first loads the tweets so we can see the existing tweets than it has a on click

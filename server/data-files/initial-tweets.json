@@ -1,3 +1,5 @@
+// this is how the data is organized within the MongoDB
+
 [
   {
     "user": {

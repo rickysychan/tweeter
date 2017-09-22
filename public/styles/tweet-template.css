@@ -1,4 +1,4 @@
-.header{
+.header {
   height: 60px;
 }
 
@@ -8,21 +8,28 @@
   opacity: 0;
 }
 
-#tweets-container{
+#tweets-container {
   margin-top: 2em;
   background-color: white;
 }
 
-.tweet:hover{
+.tweet:hover {
   opacity: 1;
 }
 
-.tweet:hover .icon-container{
+.tweet:hover .icon-container {
   opacity: 1;
 }
 
 .tweet {
   opacity: .5;
+}
+
+.tweet header .tweet-handle {
+  float: right;
+  margin-top: 0;
+  color: #b1a9a9;
+  padding-top: 0;
 }
 
 .tweet > p {
@@ -35,30 +42,15 @@ footer {
   border-top: 1px solid lightgray;
 }
 
-#tweets-container footer p{
-
-  padding-left: 15px;
-  font-size: 12px;
-  float: left;
-}
-
 footer img {
   width: 1.5em;
   float: right;
 }
 
-.tweet header .tweet-handle {
-  float: right;
-  margin-top: 0;
-  color: #b1a9a9;
-  padding-top: 0;
-}
-
-header .avatar-img {
-  width: 60px;
-  height: auto;
+#tweets-container footer p {
+  padding-left: 15px;
+  font-size: 12px;
   float: left;
-  padding-right: 10px;
 }
 
 header {
@@ -69,14 +61,21 @@ header {
   padding: 5px 5px;
 }
 
+header .avatar-img {
+  width: 60px;
+  height: auto;
+  float: left;
+  padding-right: 10px;
+}
+
 header h1 {
   margin-bottom: 0;
   margin-top: 0;
   font-size: 25px;
 }
 
-article.tweet{
-   border: 1px solid lightgray;
-   border-radius: 7px;
-   margin-top: 10px;
+article .tweet {
+  border: 1px solid lightgray;
+  border-radius: 7px;
+  margin-top: 10px;
 }

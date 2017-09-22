@@ -1,0 +1,30 @@
+.new-tweet{
+  border-radius: 5px;
+  background-color:lightgray;
+  height: 130px;
+  display: none;
+
+  form{
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  textarea{
+    width: 100%
+  }
+
+  h2{
+    padding: 10px 10px 0px 10px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  hr{
+    margin-top: 0px;
+  }
+
+}
+
+.lblCountRed{
+color: red;
+}

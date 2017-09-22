@@ -1,0 +1,206 @@
+.header {
+  height: 60px;
+}
+
+.icon-container {
+  overflow: auto;
+  padding-top: 0.5em;
+  opacity: 0;
+}
+
+#tweets-container {
+  margin-top: 2em;
+  background-color: white;
+}
+
+.tweet:hover {
+  opacity: 1;
+}
+
+.tweet:hover .icon-container {
+  opacity: 1;
+}
+
+.tweet {
+  opacity: .5;
+}
+
+.tweet header .tweet-handle {
+  float: right;
+  margin-top: 0;
+  color: #b1a9a9;
+  padding-top: 0;
+}
+
+.tweet > p {
+  padding: 20px 10px;
+  overflow-wrap: break-word;
+}
+
+footer {
+  overflow: auto;
+  border-top: 1px solid lightgray;
+}
+
+footer img {
+  width: 1.5em;
+  float: right;
+}
+
+#tweets-container footer p {
+  padding-left: 15px;
+  font-size: 12px;
+  float: left;
+}
+
+header {
+  border-radius: 5px;
+  margin: 0 auto;
+  background-color: lightgray;
+  height: 60px;
+  padding: 5px 5px;
+}
+
+header .avatar-img {
+  width: 60px;
+  height: auto;
+  float: left;
+  padding-right: 10px;
+}
+
+header h1 {
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 25px;
+}
+
+article .tweet {
+  border: 1px solid lightgray;
+  border-radius: 7px;
+  margin-top: 10px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+@media (min-width: 320px) {
+  main {
+    width: 300px;
+  }
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 0;
+  color: #244751;
+  background-color: #eee;
+}
+
+main {
+  width: 450px;
+  background-color: white;
+  /*margin: 80px auto 0px;*/
+  margin: 60px auto 0px;
+  padding: 30px;
+}
+
+body {
+  background-color: #eee;
+}
+
+body .counter {
+  float: right;
+}
+
+#nav-bar {
+  position: fixed;
+  top: 0;
+  height: 80px;
+  width: 100%;
+  background-color: #00a087;
+  color: #e8fdff;
+  padding: 0px 2em 0px 2em;
+  z-index: 1000;
+}
+
+#nav-bar .logo {
+  width: 80px;
+  height: 80px;
+  float: left;
+}
+
+#nav-bar .header {
+  float: left;
+  font-size: 200%;
+  text-align: center;
+  vertical-align: middle;
+  height: 80px;
+  line-height: 80px;
+}
+
+#nav-bar .nav-button {
+  float: left;
+  height: 40px;
+  margin-left: 7px;
+}
+
+#nav-button-container {
+  background-color: white;
+  width: 140px;
+  float: right;
+  margin-top: 1.8em;
+  height: 40px;
+  border-radius: .5em;
+  border-color: black;
+  opacity: .5;
+}
+
+#nav-button-container h2 {
+  padding-right: 20px;
+  margin: 11px 0 0 0;
+  font-size: 1.1em;
+  color: #00a087;
+}
+
+#nav-button-container:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.new-tweet {
+  border-radius: 5px;
+  background-color: lightgray;
+  height: 130px;
+  display: none;
+}
+
+.new-tweet form {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.new-tweet textarea {
+  width: 100%;
+}
+
+.new-tweet h2 {
+  padding: 10px 10px 0px 10px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.new-tweet hr {
+  margin-top: 0px;
+}
+
+.lblCountRed {
+  color: red;
+}

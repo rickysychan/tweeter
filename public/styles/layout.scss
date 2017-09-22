@@ -1,7 +1,6 @@
 html {
   box-sizing: border-box;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -9,8 +8,9 @@ html {
 /*
  * Global layout stuff
  */
-@media (min-width: 320px) {
-  main {
+
+@media (min-width:320px){
+  main{
     width: 300px;
   }
 }
@@ -30,10 +30,10 @@ main {
   padding: 30px;
 }
 
-body {
-  background-color: #eee;
+body{
+  background-color: #eee
 }
 
-body .counter {
+body .counter{
   float: right;
 }

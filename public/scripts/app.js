@@ -105,8 +105,8 @@ function createTweetElement(tweetData) {
   $footer.append($("<p>").text(time));
   $footer.append($("<div>").addClass("icon-container"));
   $footer.append($("<img>").addClass("social-img").addClass("like").innerHTML = '<i class="fa fa-heart" aria-hidden="true"></i><span class="like_counter"></span>');
-  $footer.append($("<img>").addClass("social-img").attr('src', '/images/flag.png'));
-  $footer.append($("<img>").addClass("social-img").attr('src', '/images/re-tweet.png'));
+  $footer.append($("<img>").addClass("social-img").innerHTML = '<i class="fa fa-flag" aria-hidden="true"></i>');
+  $footer.append($("<img>").addClass("social-img").innerHTML = '<i class="fa fa-retweet" aria-hidden="true"></i>');
   $tweet.append($footer);
   return $tweet;
 }

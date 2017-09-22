@@ -1,6 +1,4 @@
 
-
-
 @media (min-width:320px){
 
 }
@@ -42,12 +40,14 @@
     font-size: 15px;
     margin-top: 2px;
   }
-  .fa-heart{
+  .fa{
     color: darkgray;
     float: right;
     margin-top: 4px;
     margin-right: 1px;
     font-size: 15px;
+    padding-right: 3px;
+    padding-left: 3px;
     &.lblCountRed {
     color: red;
     }
@@ -62,10 +62,6 @@
 footer {
   overflow: auto;
   border-top: 1px solid lightgray;
-  img {
-    width: 1.5em;
-    float: right;
-  }
 }
 
 #tweets-container footer p{

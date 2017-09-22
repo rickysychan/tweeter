@@ -39,15 +39,17 @@
   margin-top: 2px;
 }
 
-.tweet .fa-heart {
+.tweet .fa {
   color: darkgray;
   float: right;
   margin-top: 4px;
   margin-right: 1px;
   font-size: 15px;
+  padding-right: 3px;
+  padding-left: 3px;
 }
 
-.tweet .fa-heart.lblCountRed {
+.tweet .fa.lblCountRed {
   color: red;
 }
 
@@ -59,11 +61,6 @@
 footer {
   overflow: auto;
   border-top: 1px solid lightgray;
-}
-
-footer img {
-  width: 1.5em;
-  float: right;
 }
 
 #tweets-container footer p {

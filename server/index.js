@@ -5,7 +5,6 @@
 const bodyParser     = require("body-parser");
 const express        = require("express");
 const app            = express();
-const moment         = require("moment");
 const PORT           = 8080;
 const sassMiddleware = require('node-sass-middleware')
 const path           = require('path');

@@ -61,7 +61,14 @@ $(document).ready(function() {
 });
 
 $(document).ready(function(){
+  var likes = 0;
   $(document).on('click', '.fa-heart', function(event){
+    if(likes < 1){
+    likes++
+    } else {
+      likes --
+    }
+    $(this).siblings(".like_counter").text(likes);
     $(this).toggleClass("lblCountRed")
   })
 });
@@ -97,9 +104,9 @@ function createTweetElement(tweetData) {
 
   $footer.append($("<p>").text(time));
   $footer.append($("<div>").addClass("icon-container"));
+  $footer.append($("<img>").addClass("social-img").addClass("like").innerHTML = '<i class="fa fa-heart" aria-hidden="true"></i><span class="like_counter"></span>');
   $footer.append($("<img>").addClass("social-img").attr('src', '/images/flag.png'));
   $footer.append($("<img>").addClass("social-img").attr('src', '/images/re-tweet.png'));
-  $footer.append($("<img>").addClass("social-img").addClass("like").innerHTML = '<i class="fa fa-heart" aria-hidden="true"></i>');
   $tweet.append($footer);
   return $tweet;
 }

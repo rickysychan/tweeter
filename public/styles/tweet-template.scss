@@ -36,16 +36,20 @@
     color: #b1a9a9;
     padding-top: 0;
   }
+  .like_counter{
+    float: right;
+    padding-right: 3px;
+    font-size: 15px;
+    margin-top: 2px;
+  }
   .fa-heart{
     color: darkgray;
     float: right;
     margin-top: 4px;
     margin-right: 1px;
     font-size: 15px;
-
-
     &.lblCountRed {
-      color: red;
+    color: red;
     }
   }
 }

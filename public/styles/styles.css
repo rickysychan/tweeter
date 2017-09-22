@@ -32,6 +32,13 @@
   padding-top: 0;
 }
 
+.tweet .like_counter {
+  float: right;
+  padding-right: 3px;
+  font-size: 15px;
+  margin-top: 2px;
+}
+
 .tweet .fa-heart {
   color: darkgray;
   float: right;

@@ -32,6 +32,18 @@
   padding-top: 0;
 }
 
+.tweet .fa-heart {
+  color: darkgray;
+  float: right;
+  margin-top: 4px;
+  margin-right: 1px;
+  font-size: 15px;
+}
+
+.tweet .fa-heart.lblCountRed {
+  color: red;
+}
+
 .tweet > p {
   padding: 20px 10px;
   overflow-wrap: break-word;
@@ -199,8 +211,4 @@ body .counter {
 
 .new-tweet hr {
   margin-top: 0px;
-}
-
-.lblCountRed {
-  color: red;
 }

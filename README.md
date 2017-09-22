@@ -10,12 +10,12 @@ Tweeter is a full stack web application built with node, express, MongoDB that a
 
 ## Dependencies
 
-  "body-parser": "^1.15.2",
-  "chance": "^1.0.2",
-  "express": "^4.13.4",
-  "md5": "^2.1.0",
-  "moment": "^2.18.1",
-  "mongodb": "^2.2.31"
+- body-parser: "^1.15.2",
+- chance: "^1.0.2",
+- express: "^4.13.4",
+- md5: "^2.1.0",
+- moment: "^2.18.1",
+- mongodb: "^2.2.31"
 
 ## getting started
 

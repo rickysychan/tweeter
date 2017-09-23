@@ -1,4 +1,4 @@
-# TinyApp Project
+# Tweeter Project
 
 Tweeter is a full stack web application built with node, express, MongoDB that allows users to create simple tweets and store them on a database.
 

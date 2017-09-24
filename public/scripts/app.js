@@ -74,6 +74,18 @@ $(document).ready(function(){
   })
 });
 
+$(document).ready(function(){
+  $('.logo').on('click', function(event){
+    window.location.replace("http://localhost:8080/");
+  })
+});
+
+$(document).ready(function(){
+  $('.header').on('click', function(event){
+    window.location.replace("http://localhost:8080/");
+  })
+});
+
 // these is the event handler for the login and register button
 
 $(document).ready(function(){

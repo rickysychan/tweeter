@@ -151,6 +151,7 @@ body .counter {
   width: 80px;
   height: 80px;
   float: left;
+  cursor: pointer;
 }
 
 #nav-bar .header {
@@ -160,6 +161,7 @@ body .counter {
   vertical-align: middle;
   height: 80px;
   line-height: 80px;
+  cursor: pointer;
 }
 
 #nav-bar .nav-button {

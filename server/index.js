@@ -8,6 +8,15 @@ const app            = express();
 const PORT           = 8080;
 const sassMiddleware = require('node-sass-middleware')
 const path           = require('path');
+const bcrypt         = require('bcrypt');
+const cookieSession  = require('cookie-session')
+const cookieParser   = require('cookie-parser')
+
+app.use(cookieSession({
+  name: 'session',
+  keys: ["pepsicola"],
+  maxAge: 24 * 60 * 60 * 1000 // 24 hours
+}))
 
 app.use(sassMiddleware({
   src: path.join( __dirname, '..', 'public' ,'styles'),

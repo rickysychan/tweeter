@@ -16,6 +16,9 @@ Tweeter is a full stack web application built with node, express, MongoDB that a
 - md5: "^2.1.0",
 - moment: "^2.18.1",
 - mongodb: "^2.2.31"
+- Cookie-Session
+- Cookie Parser
+- bcrypt
 
 ## Getting started
 

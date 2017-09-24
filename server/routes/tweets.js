@@ -6,10 +6,6 @@ const tweetsRoutes  = express.Router();
 
 module.exports = function(DataHelpers) {
 
-  tweetsRoutes.get("/login", function(req, res) {
-      res.redirect("/")
-  });
-
   tweetsRoutes.get("/", function(req, res) {
     DataHelpers.getTweets((err, tweets) => {
       if (err) {

@@ -244,3 +244,7 @@ body .counter {
 .new-tweet hr {
   margin-top: 0px;
 }
+
+.new-tweet .lblCountRed {
+  color: red;
+}

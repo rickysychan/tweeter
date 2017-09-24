@@ -140,7 +140,7 @@ $(document).ready(function(){
   });
 });
 
-// this is the toggle funciton that also auto selects the text area
+// this is the toggle function that also auto selects the text area
 
 
 

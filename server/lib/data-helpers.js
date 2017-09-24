@@ -20,6 +20,11 @@ module.exports = function makeDataHelpers(db) {
         callback(null, tweets.sort(sortNewestFirst));
       });
 
+    },
+
+    registerUser: function(newUser, callback) {
+      db.collection('users').insertOne(newUser);
+      callback(null, true);
     }
 
   }

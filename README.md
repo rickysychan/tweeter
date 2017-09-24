@@ -2,7 +2,7 @@
 
 Tweeter is a full stack web application built with node, express, MongoDB that allows users to create simple tweets and store them on a database.
 
-## final product
+## Final product
 
 ![This is the home page](https://github.com/rizelmine17/tweeter/blob/master/docs/Home-page.png)
 ![This a tweet](https://github.com/rizelmine17/tweeter/blob/master/docs/tweets.png)
@@ -17,7 +17,7 @@ Tweeter is a full stack web application built with node, express, MongoDB that a
 - moment: "^2.18.1",
 - mongodb: "^2.2.31"
 
-## getting started
+## Getting started
 
 - Install all dependencies (using the 'npm install' command)
 - Run the developement web-server using the 'npm run local' command

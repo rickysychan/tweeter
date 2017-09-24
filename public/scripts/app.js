@@ -60,6 +60,22 @@ $(document).ready(function() {
     });
 });
 
+// this code makes it so when someone clicks enter the tweet is submitted
+
+$(document).ready(function(){
+  $('#loginButton').on('click', function(event){
+    window.location.replace("http://localhost:8080/users/login");
+  })
+});
+
+$(document).ready(function(){
+  $('#registerButton').on('click', function(event){
+    window.location.replace("http://localhost:8080/users/register");
+  })
+});
+
+// these is the event handler for the login and register button
+
 $(document).ready(function(){
   var likes = 0;
   $(document).on('click', '.fa-heart', function(event){

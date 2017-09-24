@@ -17,6 +17,8 @@ app.use(sassMiddleware({
   prefix: '/styles'
 }));
 
+app.set("view engine", "ejs")
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
@@ -38,9 +40,11 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
   // The `tweets-routes` module works similarly: we pass it the `DataHelpers` object
   // so it can define routes that use it to interact with the data layer.
   const tweetsRoutes = require("./routes/tweets")(DataHelpers);
+  const userRoutes   = require("./routes/users")(DataHelpers);
 
   // Mount the tweets routes at the "/tweets" path prefix:
   app.use("/tweets", tweetsRoutes);
+  app.use("/users", userRoutes);
 
   app.listen(PORT, () => {
     console.log("Tweeter app listening on port " + PORT);

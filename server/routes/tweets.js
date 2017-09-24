@@ -1,11 +1,14 @@
 "use strict";
 
 const userHelper    = require("../lib/util/user-helper")
-
 const express       = require('express');
 const tweetsRoutes  = express.Router();
 
 module.exports = function(DataHelpers) {
+
+  tweetsRoutes.get("/login", function(req, res) {
+      res.redirect("/")
+  });
 
   tweetsRoutes.get("/", function(req, res) {
     DataHelpers.getTweets((err, tweets) => {
@@ -51,11 +54,9 @@ module.exports = function(DataHelpers) {
     });
   });
 
-
   return tweetsRoutes;
 
   // this checks for errors if none it will send an ok form and returns
   // whatever has been generated in tweetsroutes, it saves it to the db with datahelpers.
 
-
-}
+};
